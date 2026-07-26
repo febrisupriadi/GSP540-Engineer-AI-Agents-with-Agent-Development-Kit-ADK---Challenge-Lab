@@ -125,9 +125,9 @@ Pastikan parameter model di dalam konfigurasi agen menggunakan versi flash terba
 
 Jika berhasil, outputnya akan langsung berupa format JSON murni (misalnya {"capital": "Paris"}). 
 
-**Catatan Penting!** 
-Tentang file .env:
-Buka atau tambahkan file baru jika belum ada, yaitu file .env di dalam direktori adk_project/geo_validator/.
+   **Catatan Penting!** 
+   Tentang file .env:
+   Buka atau tambahkan file baru jika belum ada, yaitu file .env di dalam direktori adk_project/geo_validator/.
 
    Pastikan isinya lengkap seperti ini:
 
