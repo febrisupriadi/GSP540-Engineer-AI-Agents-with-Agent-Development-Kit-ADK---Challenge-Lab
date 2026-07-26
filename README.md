@@ -86,8 +86,11 @@ Catatan verifikasi agen melalui antarmuka baris perintah (CLI):
       class CountryCapital(BaseModel):
           capital: str
 
+---
 
-4. **Enforce this schema via output_schema**
+## Task 4. Enforce structured standards
+
+1. **Enforce this schema via output_schema**
 Setelah membuat model Pydantic di atas,kita harus menerapkannya ke dalam definisi agen `(Agent(...))` agar agen tahu bahwa ia wajib mengembalikan respons dalam format skema tersebut.
 
    Cara penulisannya di dalam definisi Agent:
@@ -100,7 +103,7 @@ Setelah membuat model Pydantic di atas,kita harus menerapkannya ke dalam definis
           # ... parameter lainnya ...
       )
 
-5. **Disable transfers**
+2. **Disable transfers**
 Instruksi ini meminta Anda untuk mencegah agen melakukan transfer tugas atau delegasi ke agen lain maupun ke agen induknya.
 
       Cara penulisannya di dalam argumen definisi Agent:
@@ -109,7 +112,7 @@ Instruksi ini meminta Anda untuk mencegah agen melakukan transfer tugas atau del
       disallow_transfer_to_parent=True,
       disallow_transfer_to_peers=True,
 
-6. **Set Model: gemini-3.5-flash**
+3. **Set Model: gemini-3.5-flash**
 Pastikan parameter model di dalam konfigurasi agen menggunakan versi flash terbaru sesuai instruksi lab.
 
       Contoh penerapannya:
@@ -117,7 +120,7 @@ Pastikan parameter model di dalam konfigurasi agen menggunakan versi flash terba
       ```bash
       model="gemini-3.5-flash",
 
-7. **Pengujian programatik** di terminal Cloud Shell:
+4. **Pengujian programatik** di terminal Cloud Shell:
 
       ```bash
       python3 geo_validator/agent.py
@@ -125,9 +128,11 @@ Pastikan parameter model di dalam konfigurasi agen menggunakan versi flash terba
 
 Jika berhasil, outputnya akan langsung berupa format JSON murni (misalnya {"capital": "Paris"}). 
 
-   **Catatan Penting!** 
-   Tentang file .env:
-   Buka atau tambahkan file baru jika belum ada, yaitu file .env di dalam direktori adk_project/geo_validator/.
+
+**`Catatan Penting!`**
+
+Tentang file .env:
+Buka atau tambahkan file baru jika belum ada, yaitu file .env di dalam direktori adk_project/geo_validator/.
 
    Pastikan isinya lengkap seperti ini:
 
