@@ -189,7 +189,8 @@ Catatan penyelesaian dan pemulihan sistem multi-agen *Brochure Auditor* (`llm_au
       adk web --allow_origins "regex:https://.*\.cloudshell\.dev"
 
 
-   Memilih modul llm_auditor melalui antarmuka web, lalu mengirimkan klaim pengujian:
+
+Memilih modul llm_auditor melalui antarmuka web, lalu mengirimkan klaim pengujian:
    `Double check this: You can take a direct train from Hawaii to Japan.`
 
 Sistem berhasil memicu agen Critic untuk mendebunk klaim tersebut sekaligus memicu agen Reviser untuk menyajikan koreksi fakta secara akurat, sehingga checkpoint penilaian Task 5 berhasil diverifikasi.
