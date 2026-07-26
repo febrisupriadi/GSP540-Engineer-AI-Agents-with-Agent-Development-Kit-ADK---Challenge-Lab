@@ -122,4 +122,5 @@ Pastikan parameter model di dalam konfigurasi agen menggunakan versi flash terba
       ```bash
       python3 geo_validator/agent.py
 
-   Jika berhasil, outputnya akan langsung berupa format JSON murni (misalnya {"capital": "Paris"}). Kabari saya jika sudah berhasil agar kita catat task ini!
+
+Jika berhasil, outputnya akan langsung berupa format JSON murni (misalnya {"capital": "Paris"}). Kabari saya jika sudah berhasil agar kita catat task ini!
