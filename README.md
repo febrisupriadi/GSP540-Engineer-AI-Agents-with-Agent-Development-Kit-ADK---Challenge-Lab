@@ -123,4 +123,23 @@ Pastikan parameter model di dalam konfigurasi agen menggunakan versi flash terba
       python3 geo_validator/agent.py
 
 
-Jika berhasil, outputnya akan langsung berupa format JSON murni (misalnya {"capital": "Paris"}). Kabari saya jika sudah berhasil agar kita catat task ini!
+Jika berhasil, outputnya akan langsung berupa format JSON murni (misalnya {"capital": "Paris"}). 
+
+**Catatan Penting! tentang file .env:
+Buka atau tambahkan file baru jika belum ada, yaitu file .env di dalam direktori adk_project/geo_validator/.
+
+Pastikan isinya lengkap seperti ini:
+
+      ```Code snippet
+      GOOGLE_GENAI_USE_ENTERPRISE=true
+      GOOGLE_GENAI_USE_VERTEXAI=true
+      GOOGLE_CLOUD_PROJECT=qwiklabs-gcp-01-73ac03e7ee28
+      GOOGLE_CLOUD_LOCATION=global
+      MODEL=gemini-3.5-flash
+
+Simpan file tersebut, lalu jalankan kembali perintahnya:
+
+      ```Bash
+      python3 geo_validator/agent.py
+      
+---
