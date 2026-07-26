@@ -80,11 +80,11 @@ Catatan verifikasi agen melalui antarmuka baris perintah (CLI):
 3. **Define a Pydantic model CountryCapital**:
    Cara penulisannya di `agent.py`:
 
-  ```bash
-   from pydantic import BaseModel
+     ```bash
+      from pydantic import BaseModel
    
-   class CountryCapital(BaseModel):
-       capital: str
+      class CountryCapital(BaseModel):
+          capital: str
 
 
 4. **Enforce this schema via output_schema**
