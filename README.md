@@ -129,7 +129,7 @@ Jika berhasil, outputnya akan langsung berupa format JSON murni (misalnya {"capi
 Tentang file .env:
 Buka atau tambahkan file baru jika belum ada, yaitu file .env di dalam direktori adk_project/geo_validator/.
 
-Pastikan isinya lengkap seperti ini:
+   Pastikan isinya lengkap seperti ini:
 
          ```bash
          GOOGLE_GENAI_USE_ENTERPRISE=true
@@ -138,7 +138,7 @@ Pastikan isinya lengkap seperti ini:
          GOOGLE_CLOUD_LOCATION=global
          MODEL=gemini-3.5-flash
 
-Simpan file tersebut, lalu jalankan kembali perintahnya:
+   Simpan file tersebut, lalu jalankan kembali perintahnya:
 
          ```bash
          python3 geo_validator/agent.py
