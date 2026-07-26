@@ -171,12 +171,14 @@ Catatan penyelesaian dan pemulihan sistem multi-agen *Brochure Auditor* (`llm_au
 
       ```bash
       from .sub_agents.reviser import reviser_agent
+      ```
 
 
    Memasukkan reviser_agent ke dalam daftar sub_agents pada SequentialAgent agar pipeline berjalan    utuh (tahap kritik fakta oleh Critic dilanjutkan dengan perbaikan teks oleh Reviser):
 
       ```
       sub_agents=[critic_agent, reviser_agent]
+      ```
 
 
 3. **Pengujian Pipeline Multi-Agen di ADK Dev UI**:
