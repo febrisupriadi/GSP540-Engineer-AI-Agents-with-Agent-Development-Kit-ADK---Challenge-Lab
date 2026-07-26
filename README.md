@@ -125,12 +125,13 @@ Pastikan parameter model di dalam konfigurasi agen menggunakan versi flash terba
 
 Jika berhasil, outputnya akan langsung berupa format JSON murni (misalnya {"capital": "Paris"}). 
 
-**Catatan Penting! tentang file .env:
+**Catatan Penting!** 
+Tentang file .env:
 Buka atau tambahkan file baru jika belum ada, yaitu file .env di dalam direktori adk_project/geo_validator/.
 
 Pastikan isinya lengkap seperti ini:
 
-      ```
+      ```bash
       GOOGLE_GENAI_USE_ENTERPRISE=true
       GOOGLE_GENAI_USE_VERTEXAI=true
       GOOGLE_CLOUD_PROJECT=qwiklabs-gcp-01-73ac03e7ee28
@@ -139,7 +140,7 @@ Pastikan isinya lengkap seperti ini:
 
 Simpan file tersebut, lalu jalankan kembali perintahnya:
 
-      ```
+      ```bash
       python3 geo_validator/agent.py
       
 ---
