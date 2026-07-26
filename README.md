@@ -116,3 +116,10 @@ Pastikan parameter model di dalam konfigurasi agen menggunakan versi flash terba
       
       ```bash
       model="gemini-3.5-flash",
+
+7. **Pengujian programatik** di terminal Cloud Shell:
+
+      ```bash
+      python3 geo_validator/agent.py
+
+   Jika berhasil, outputnya akan langsung berupa format JSON murni (misalnya {"capital": "Paris"}). Kabari saya jika sudah berhasil agar kita catat task ini!
