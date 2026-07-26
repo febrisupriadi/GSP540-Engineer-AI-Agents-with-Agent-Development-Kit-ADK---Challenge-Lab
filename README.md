@@ -100,3 +100,19 @@ Setelah membuat model Pydantic di atas,kita harus menerapkannya ke dalam definis
           # ... parameter lainnya ...
       )
 
+5. **Disable transfers**
+Instruksi ini meminta Anda untuk mencegah agen melakukan transfer tugas atau delegasi ke agen lain maupun ke agen induknya.
+
+      Cara penulisannya di dalam argumen definisi Agent:
+      
+      ```bash
+      disallow_transfer_to_parent=True,
+      disallow_transfer_to_peers=True,
+
+6. **Set Model: gemini-3.5-flash**
+Pastikan parameter model di dalam konfigurasi agen menggunakan versi flash terbaru sesuai instruksi lab.
+
+      Contoh penerapannya:
+      
+      ```bash
+      model="gemini-3.5-flash",
