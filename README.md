@@ -51,7 +51,7 @@ Catatan konfigurasi dan pengujian Travel Scout (`my_google_search_agent`):
    MODEL=gemini-3.5-flash
 
 2. **Mengaktifkan Tool Google Search (agent.py)**:
-Menambahkan argumen tools=[google_search] pada definisi agen agar dapat mengakses informasi real-time.
+Menambahkan argumen tools=`[google_search]` pada definisi agen agar dapat mengakses informasi real-time.
 
 3. **Menjalankan ADK Dev UI & Pengujian**:
 
@@ -59,5 +59,5 @@ Menambahkan argumen tools=[google_search] pada definisi agen agar dapat mengakse
    cd ~/adk_project
    adk web --allow_origins "regex:https://.*\.cloudshell\.dev"
 
-4. **Mengakses antarmuka web,.** memilih agen my_google_search_agent, dan menguji kueri terkait event di Tokyo pada 2025 hingga berhasil mendapatkan respons yang ter-grounding dengan Google Search.
+4. **Mengakses antarmuka web,.** memilih agen `my_google_search_agent`, dan menguji kueri terkait event di Tokyo pada 2025 hingga berhasil mendapatkan respons yang ter-grounding dengan Google Search.
 
