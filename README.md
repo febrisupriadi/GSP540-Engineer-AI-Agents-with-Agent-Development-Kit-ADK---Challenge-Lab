@@ -76,25 +76,27 @@ Catatan verifikasi agen melalui antarmuka baris perintah (CLI):
 2. **Pengujian Kueri**:
    Mengajukan pertanyaan terkait kurs mata uang untuk Jepang guna memastikan agen merespons secara langsung dan akurat melalui terminal.
 
-3. **Define a Pydantic model CountryCapital**
+
+3. **Define a Pydantic model CountryCapital**:
    Cara penulisannya di `agent.py`:
 
   ```bash
    from pydantic import BaseModel
    
    class CountryCapital(BaseModel):
-       capital: str ```
+       capital: str
+
 
 4. **Enforce this schema via output_schema**
 Setelah membuat model Pydantic di atas,kita harus menerapkannya ke dalam definisi agen `(Agent(...))` agar agen tahu bahwa ia wajib mengembalikan respons dalam format skema tersebut.
 
-Cara penulisannya di dalam definisi Agent:
-
-   ```bash
-   root_agent = Agent(
-       name="geo_validator",
-       model="gemini-3.5-flash",
-       output_schema=CountryCapital,  # Menetapkan skema di sini
-       # ... parameter lainnya ...
-   ) ```
+   Cara penulisannya di dalam definisi Agent:
+   
+      ```bash
+      root_agent = Agent(
+          name="geo_validator",
+          model="gemini-3.5-flash",
+          output_schema=CountryCapital,  # Menetapkan skema di sini
+          # ... parameter lainnya ...
+      )
 
