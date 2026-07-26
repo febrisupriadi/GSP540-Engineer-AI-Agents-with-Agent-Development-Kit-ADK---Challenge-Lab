@@ -131,16 +131,16 @@ Buka atau tambahkan file baru jika belum ada, yaitu file .env di dalam direktori
 
 Pastikan isinya lengkap seperti ini:
 
-      ```bash
-      GOOGLE_GENAI_USE_ENTERPRISE=true
-      GOOGLE_GENAI_USE_VERTEXAI=true
-      GOOGLE_CLOUD_PROJECT=qwiklabs-gcp-01-73ac03e7ee28
-      GOOGLE_CLOUD_LOCATION=global
-      MODEL=gemini-3.5-flash
+         ```bash
+         GOOGLE_GENAI_USE_ENTERPRISE=true
+         GOOGLE_GENAI_USE_VERTEXAI=true
+         GOOGLE_CLOUD_PROJECT=qwiklabs-gcp-01-73ac03e7ee28
+         GOOGLE_CLOUD_LOCATION=global
+         MODEL=gemini-3.5-flash
 
 Simpan file tersebut, lalu jalankan kembali perintahnya:
 
-      ```bash
-      python3 geo_validator/agent.py
+         ```bash
+         python3 geo_validator/agent.py
       
 ---
