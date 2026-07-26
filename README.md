@@ -31,8 +31,33 @@ Menjalankan perintah gcloud auth application-default login dan memasukkan kode v
 
 3. **Mengunduh dan Menyiapkan Berkas Proyek**:
 
-```bash
-gcloud storage cp gs://qwiklabs-gcp-01-73ac03e7ee28-bucket/adk_project.zip .
-unzip adk_project.zip
-cd adk_project
-pip install -r requirements.txt
+   ```bash
+   gcloud storage cp gs://qwiklabs-gcp-01-73ac03e7ee28-bucket/adk_project.zip .
+   unzip adk_project.zip
+   cd adk_project
+   pip install -r requirements.txt
+
+---
+## Task 2. Initialize and Configure the Travel Scout
+
+Catatan konfigurasi dan pengujian Travel Scout (`my_google_search_agent`):
+
+1. **Konfigurasi Environment (`.env`)**:
+   Menyesuaikan direktori `adk_project/my_google_search_agent` dengan parameter Enterprise dan model `gemini-3.5-flash`:
+   ```env
+   GOOGLE_GENAI_USE_ENTERPRISE=true
+   GOOGLE_CLOUD_PROJECT=qwiklabs-gcp-01-73ac03e7ee28
+   GOOGLE_CLOUD_LOCATION=global
+   MODEL=gemini-3.5-flash
+
+2. **Mengaktifkan Tool Google Search (agent.py)**:
+Menambahkan argumen tools=[google_search] pada definisi agen agar dapat mengakses informasi real-time.
+
+3. **Menjalankan ADK Dev UI & Pengujian**:
+
+   ```bash
+   cd ~/adk_project
+   adk web --allow_origins "regex:https://.*\.cloudshell\.dev"
+
+4. **Mengakses antarmuka web,.** memilih agen my_google_search_agent, dan menguji kueri terkait event di Tokyo pada 2025 hingga berhasil mendapatkan respons yang ter-grounding dengan Google Search.
+
