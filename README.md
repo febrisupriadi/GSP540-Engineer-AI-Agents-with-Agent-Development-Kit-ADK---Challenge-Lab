@@ -178,7 +178,6 @@ Catatan penyelesaian dan pemulihan sistem multi-agen *Brochure Auditor* (`llm_au
 
       ```
       sub_agents=[critic_agent, reviser_agent]
-      ```
 
 
 3. **Pengujian Pipeline Multi-Agen di ADK Dev UI**:
@@ -189,7 +188,7 @@ Catatan penyelesaian dan pemulihan sistem multi-agen *Brochure Auditor* (`llm_au
       cd ~/adk_project
       adk web --allow_origins "regex:https://.*\.cloudshell\.dev"
 
-      
+
    Memilih modul llm_auditor melalui antarmuka web, lalu mengirimkan klaim pengujian:
    `Double check this: You can take a direct train from Hawaii to Japan.`
 
