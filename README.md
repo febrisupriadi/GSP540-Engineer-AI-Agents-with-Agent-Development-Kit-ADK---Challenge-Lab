@@ -59,5 +59,29 @@ Menambahkan argumen tools=`[google_search]` pada definisi agen agar dapat mengak
    cd ~/adk_project
    adk web --allow_origins "regex:https://.*\.cloudshell\.dev"
 
-4. **Mengakses antarmuka web,.** memilih agen `my_google_search_agent`, dan menguji kueri terkait event di Tokyo pada 2025 hingga berhasil mendapatkan respons yang ter-grounding dengan Google Search.
+4. **Mengakses antarmuka web,** memilih agen `my_google_search_agent`, dan menguji kueri terkait event di Tokyo pada 2025 hingga berhasil mendapatkan respons yang ter-grounding dengan Google Search.
 
+
+---
+
+## Task 3. Verify the agent via the CLI
+
+Catatan verifikasi agen melalui antarmuka baris perintah (CLI):
+
+1. **Menjalankan Agen via CLI**:
+   Dari direktori root proyek `adk_project`, jalankan perintah:
+   ```bash
+   adk run my_google_search_agent
+
+2. **Pengujian Kueri**:
+   Mengajukan pertanyaan terkait kurs mata uang untuk Jepang guna memastikan agen merespons secara langsung dan akurat melalui terminal.
+
+3. **Define a Pydantic model CountryCapital**
+   Cara penulisannya di `agent.py` di folder `my_google_search_agent
+`:
+
+   Python
+   from pydantic import BaseModel
+   
+   class CountryCapital(BaseModel):
+       capital: str
