@@ -149,3 +149,49 @@ Buka atau tambahkan file baru jika belum ada, yaitu file .env di dalam direktori
          python3 geo_validator/agent.py
       
 ---
+
+## Task 5. Deploy the Brochure Auditor
+
+Catatan penyelesaian dan pemulihan sistem multi-agen *Brochure Auditor* (`llm_auditor`):
+
+1. **Konfigurasi Environment (`.env`)**:
+   Memastikan direktori `adk_project/llm_auditor` terhubung ke platform dengan model flash terbaru:
+   ```env
+   GOOGLE_GENAI_USE_ENTERPRISE=true
+   GOOGLE_GENAI_USE_VERTEXAI=true
+   GOOGLE_CLOUD_PROJECT=qwiklabs-gcp-01-73ac03e7ee28
+   GOOGLE_CLOUD_LOCATION=global
+   MODEL=gemini-3.5-flash
+
+2. **Memulihkan Pipeline Multi-Agen `(agent.py)`**:
+
+   Membuka berkas agent.py di dalam direktori llm_auditor.
+
+   Menghilangkan tanda komentar (uncomment) pada impor reviser_agent:
+
+      ```bash
+      from .sub_agents.reviser import reviser_agent
+
+
+   Memasukkan reviser_agent ke dalam daftar sub_agents pada SequentialAgent agar pipeline berjalan    utuh (tahap kritik fakta oleh Critic dilanjutkan dengan perbaikan teks oleh Reviser):
+
+      ```
+      sub_agents=[critic_agent, reviser_agent]
+
+
+3. **Pengujian Pipeline Multi-Agen di ADK Dev UI**:
+
+   Menjalankan kembali server pengembangan ADK dari direktori root proyek:
+
+      ```bash
+      cd ~/adk_project
+      adk web --allow_origins "regex:https://.*\.cloudshell\.dev"
+
+      
+   Memilih modul llm_auditor melalui antarmuka web, lalu mengirimkan klaim pengujian:
+   `Double check this: You can take a direct train from Hawaii to Japan.`
+
+Sistem berhasil memicu agen Critic untuk mendebunk klaim tersebut sekaligus memicu agen Reviser untuk menyajikan koreksi fakta secara akurat, sehingga checkpoint penilaian Task 5 berhasil diverifikasi.
+
+
+   
