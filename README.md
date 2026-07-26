@@ -83,7 +83,7 @@ Catatan verifikasi agen melalui antarmuka baris perintah (CLI):
    from pydantic import BaseModel
    
    class CountryCapital(BaseModel):
-       capital: str
+       capital: str ```
 
 4. **Enforce this schema via output_schema**
 Setelah membuat model Pydantic di atas,kita harus menerapkannya ke dalam definisi agen `(Agent(...))` agar agen tahu bahwa ia wajib mengembalikan respons dalam format skema tersebut.
@@ -96,5 +96,5 @@ Cara penulisannya di dalam definisi Agent:
        model="gemini-3.5-flash",
        output_schema=CountryCapital,  # Menetapkan skema di sini
        # ... parameter lainnya ...
-   )
+   ) ```
 
