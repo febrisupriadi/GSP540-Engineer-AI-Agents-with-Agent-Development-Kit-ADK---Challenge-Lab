@@ -29,9 +29,9 @@ You will be working in the `adk_project` directory, which contains:
 2. **Autentikasi Google Cloud**:
 Menjalankan perintah gcloud auth application-default login dan memasukkan kode verifikasi untuk menetapkan kredensial proyek serta pengguna.
 
-Mengunduh dan Menyiapkan Berkas Proyek:
+3. **Mengunduh dan Menyiapkan Berkas Proyek**:
 
-Bash
+```bash
 gcloud storage cp gs://qwiklabs-gcp-01-73ac03e7ee28-bucket/adk_project.zip .
 unzip adk_project.zip
 cd adk_project
